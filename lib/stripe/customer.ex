@@ -60,7 +60,9 @@ defmodule Stripe.Customer do
   }
 
   @nullable_keys [
-    :business_vat_id, :description, :email, :metadata
+    # Stripe expects only the changes we desire in the post body, so why should
+    # we send nullable keys at all?
+    # :business_vat_id, :description, :email, :metadata
   ]
 
   @doc """
